@@ -1,8 +1,11 @@
+<poke-search ></poke-search>
+
+<section class="list">
 <ng-template ngFor let-pokemon [ngForOf]="getAllPokemons">
-    <a class="pokemon">
+    <a routerLink="details/{{pokemon.status.id}}" class="pokemon" *ngIf="pokemon.status">
         <section class="pokemon_preview">
             <h2>
-                {{ pokemon.name }}
+                #{{pokemon.status.id}} {{ pokemon.name }} 
             </h2>
             <ul>
                 <li *ngFor="let value of pokemon?.status?.types">{{value.type.name}}</li> 
@@ -15,3 +18,4 @@
         </section>
     </a>    
 </ng-template>
+</section>

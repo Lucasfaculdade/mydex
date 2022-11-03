@@ -1,10 +1,15 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { PokeHeaderComponent } from './shared/poke-header/poke-header.component';
 
 const routes: Routes = [
   {
     path:'',
     loadChildren: () => import('./pages/pages.module').then(p => p.PagesModule)
+  },
+  {
+    path:'',
+    component: PokeHeaderComponent
   }
 ];
 
