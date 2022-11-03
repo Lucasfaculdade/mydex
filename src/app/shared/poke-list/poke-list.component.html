@@ -1,0 +1,17 @@
+<ng-template ngFor let-pokemon [ngForOf]="getAllPokemons">
+    <a class="pokemon">
+        <section class="pokemon_preview">
+            <h2>
+                {{ pokemon.name }}
+            </h2>
+            <ul>
+                <li *ngFor="let value of pokemon?.status?.types">{{value.type.name}}</li> 
+            </ul>
+        </section>
+        
+    
+        <section class="pokemon_sprite">
+            <img [src]="pokemon.status.sprites.front_default" [alt]="pokemon">
+        </section>
+    </a>    
+</ng-template>
