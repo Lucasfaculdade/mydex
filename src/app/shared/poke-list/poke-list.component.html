@@ -1,14 +1,14 @@
-<poke-search ></poke-search>
+<poke-search (emmitSearch)="searchList($event)"></poke-search>
 
 <section class="list">
 <ng-template ngFor let-pokemon [ngForOf]="getAllPokemons">
-    <a routerLink="details/{{pokemon.status.id}}" class="pokemon" *ngIf="pokemon.status">
+    <button routerLink="details/{{pokemon.status.id}}" class="pokemon" *ngIf="pokemon.status">
         <section class="pokemon_preview">
             <h2>
-                #{{pokemon.status.id}} {{ pokemon.name }} 
+                 {{ pokemon.name }} 
             </h2>
             <ul>
-                <li *ngFor="let value of pokemon?.status?.types">{{value.type.name}}</li> 
+                <li class="pokemon_type" *ngFor="let value of pokemon?.status?.types">{{value.type.name}}</li> 
             </ul>
         </section>
         
@@ -16,6 +16,6 @@
         <section class="pokemon_sprite">
             <img [src]="pokemon.status.sprites.front_default" [alt]="pokemon">
         </section>
-    </a>    
+    </button>    
 </ng-template>
 </section>

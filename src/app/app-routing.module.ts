@@ -7,10 +7,6 @@ const routes: Routes = [
     path:'',
     loadChildren: () => import('./pages/pages.module').then(p => p.PagesModule)
   },
-  {
-    path:'',
-    component: PokeHeaderComponent
-  }
 ];
 
 @NgModule({

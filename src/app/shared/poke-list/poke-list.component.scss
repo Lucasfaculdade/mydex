@@ -7,14 +7,18 @@ $padding: rem-calc(20);
     justify-content: space-between;
     flex-wrap: wrap;
     padding: $padding 0;
-
+    
+    
     .pokemon {
+
         position: relative;
         display: flex;
         background: var(--white);
         
-        width: 27%;
-        height: rem-calc(157 - 40);
+        box-shadow: 10px 5px 5px black;
+
+        width: 32%;
+        height: rem-calc(187 - 40);
         margin-bottom: rem-calc(10);
         padding: $padding;
         
@@ -22,8 +26,12 @@ $padding: rem-calc(20);
 
         text-decoration: none;
         color: var(--primary-color);
-
+        
+        &_type{
+           color: var(--grass);
+        }
         &_preview{
+            
             h2{
                 font-size: rem-calc(22);
                 font-style: italic;
@@ -34,6 +42,7 @@ $padding: rem-calc(20);
             ul{
                 display: flex;
                 flex-direction: column;
+                       
             }
             li{
                 background: var(--grey);
