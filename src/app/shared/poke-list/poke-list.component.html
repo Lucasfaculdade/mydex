@@ -2,7 +2,7 @@
 
 <section class="list">
 <ng-template ngFor let-pokemon [ngForOf]="getAllPokemons">
-    <button routerLink="details/{{pokemon.status.id}}" class="pokemon" *ngIf="pokemon.status">
+    <button routerLink="information/{{pokemon.status.id}}" class="pokemon" *ngIf="pokemon.status">
         <section class="pokemon_preview">
             <h2>
                  {{ pokemon.name }} 

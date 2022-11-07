@@ -4,11 +4,11 @@ import { forkJoin } from 'rxjs';
 import { PokeApiService } from 'src/app/service/poke-api.service';
 
 @Component({
-  selector: 'details',
-  templateUrl: './details.component.html',
-  styleUrls: ['./details.component.scss']
+  selector: 'information',
+  templateUrl: './information.component.html',
+  styleUrls: ['./information.component.scss']
 })
-export class DetailsComponent implements OnInit {
+export class InformationComponent implements OnInit {
    
   private urlPokemon: string = 'https://pokeapi.co/api/v2/pokemon';
   private urlName: string = 'https://pokeapi.co/api/v2/pokemon-species';
