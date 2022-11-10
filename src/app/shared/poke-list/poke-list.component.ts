@@ -33,4 +33,8 @@ export class PokeListComponent implements OnInit {
       });
       this.getAllPokemons = filter;
   }
+
+  public onHeartClick(): void{
+     console.log("Favorito");
+  }
 }

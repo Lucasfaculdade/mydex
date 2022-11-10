@@ -1,0 +1,70 @@
+@import '../../../style-scss/rem-calc.scss';
+
+
+:host{
+    .pages-wrapper{
+      display: flex;
+      justify-content: center;
+      
+    }
+
+    .pages-wrapper a,
+   .pages-wrapper .current {
+    display: inline-block;
+    width: 55px;
+    height: 55px;
+    text-align: center;
+    color: #ffffff;
+    font-size: 14px !important;
+    font-family: "latobold" !important;
+    vertical-align: top;
+    line-height: 16px !important;
+    text-decoration: none !important;
+}
+.pages-wrapper a.page{
+    color: #ffffff;
+    vertical-align: middle;
+}
+.pages-wrapper a:last-child {
+    margin-left: 5px;
+}
+.pages-wrapper a:not(.page) {
+    border: 2px solid #ffffff;
+}
+.pages-wrapper a i, 
+.pages-wrapper .current span, 
+.pages-wrapper a span {
+    position: relative;
+    top: 8px;
+}
+.pages-wrapper a i {
+    font-size: 0px;
+    width: auto !important;
+    height: auto !important;
+    display: inline-block !important;
+}
+.pages-wrapper a i:before {
+    font-size: 17px;
+}
+.pages-wrapper a.page:hover span,
+.pages-wrapper a.page.active span {
+    border-bottom: 2px solid #ff0000;
+    color: #ff0000;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-bottom: 4px;
+}
+.pages-wrapper a:hover {
+    text-decoration: none !important;
+}
+.pages-wrapper a:hover:not(.page) {
+    color: #ff0000;
+    border: 2px solid #ff0000;
+    text-decoration: none;
+}
+.pages-wrapper a .icone-arrow_left:before,
+.pages-wrapper a .icone-arrow_right:before{
+    margin: auto;
+    display: block;
+}
+}

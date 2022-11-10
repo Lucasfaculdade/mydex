@@ -8,7 +8,7 @@
                  {{ pokemon.name }} 
             </h2>
             <ul>
-                <li class="pokemon_type" *ngFor="let value of pokemon?.status?.types">{{value.type.name}}</li> 
+                <li [class]="'{type} = __type '"  *ngFor="let value of pokemon?.status?.types">{{value.type.name}}</li> 
             </ul>
         </section>
         
@@ -16,7 +16,9 @@
         <section class="pokemon_sprite">
             <img [src]="pokemon.status.sprites.front_default" [alt]="pokemon">
         </section>
-    </button>    
+    </button>  
+    
+    
 </ng-template>
 </section>
 
