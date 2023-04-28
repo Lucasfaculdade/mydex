@@ -15,9 +15,11 @@ export class PokeListComponent implements OnInit {
 
   constructor(private pokeApiService: PokeApiService) { }
 
+
   ngOnInit(): void {
     this.pokeApiService.apiListAllPokemons.subscribe(
       (res: any) => {
+        
         this.setAllPokemons = res.results;
         this.getAllPokemons= this.setAllPokemons;
       },
@@ -32,9 +34,5 @@ export class PokeListComponent implements OnInit {
         return !res.name.indexOf(value.toLocaleLowerCase());
       });
       this.getAllPokemons = filter;
-  }
-
-  public onHeartClick(): void{
-     console.log("Favorito");
   }
 }
